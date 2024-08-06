@@ -29,12 +29,12 @@ namespace CTACheat
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Utils.Utils.decrypt_file(textBox3.Text, textBox1.Text, textBox4.Text, textBox2.Text);
+            Utils.Utils.decrypt_file(textBox3.Text, textBox1.Text, "katto", "catto");
         }
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            Utils.Utils.encrypt_file(textBox3.Text, textBox1.Text, textBox4.Text, textBox2.Text);
+            Utils.Utils.encrypt_file(textBox3.Text, textBox1.Text, "katto", "catto");
         }
 
 
@@ -47,13 +47,24 @@ namespace CTACheat
             if (hate > 84)
             {
                 Console.WriteLine("CTACheat - A cheat tool for the game we all hate");
-            } else
+            }
+            else
             {
                 Console.WriteLine("CTACheat - A cheat tool for the game we all love");
             }
             Console.WriteLine("Built on " + Properties.Resources.test);
             Console.WriteLine("WARNING: Be careful while editing the decrypted file.ini, improper changes can result in your savegame being unusable!");
 
-    }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

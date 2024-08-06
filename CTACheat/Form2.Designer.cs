@@ -36,9 +36,10 @@
             label1.AutoSize = true;
             label1.Location = new Point(12, 9);
             label1.Name = "label1";
-            label1.Size = new Size(383, 45);
+            label1.Size = new Size(380, 45);
             label1.TabIndex = 0;
-            label1.Text = "Get it by pressing Win+R and type %localappdata%, open the directory \r\n\"catto boi the quest for the frozen tuna\" and \r\ncopy the directory path into the box.\r\n";
+            label1.Text = "Get it by pressing Win+R and type %localappdata%, open the directory\r\nrespective to your game and \r\ncopy the directory path into the box.\r\n";
+            label1.Click += label1_Click_1;
             // 
             // Form2
             // 
