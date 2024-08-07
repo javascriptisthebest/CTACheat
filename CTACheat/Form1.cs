@@ -1,7 +1,7 @@
 using System.Diagnostics.Eventing.Reader;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography;
-
+using System.IO;
 
 namespace CTACheat
 {
@@ -29,12 +29,13 @@ namespace CTACheat
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Utils.Utils.decrypt_file(textBox3.Text, textBox1.Text, "katto", "catto");
+            Utils.Utils.decrypt_file(textBox3.Text, textBox1.Text, "catto", "katto");
+
         }
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            Utils.Utils.encrypt_file(textBox3.Text, textBox1.Text, "katto", "catto");
+            Utils.Utils.encrypt_file(textBox3.Text, textBox1.Text, "catto", "katto");
         }
 
 
@@ -57,14 +58,17 @@ namespace CTACheat
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
 
+            RandomNumberGenerator.GetInt32(1);
+            object titleNames = new object[6];
+            //Form1.Text = ""
         }
     }
 }

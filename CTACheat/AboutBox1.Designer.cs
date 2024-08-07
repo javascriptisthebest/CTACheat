@@ -68,11 +68,11 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "AboutBox1";
-            Padding = new Padding(10, 10, 10, 10);
+            Padding = new Padding(10);
             ShowIcon = false;
             ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterParent;
-            Text = "AboutBox1";
+            Text = "About CTACheat";
             ((System.ComponentModel.ISupportInitialize)bindingSource1).EndInit();
             ResumeLayout(false);
             PerformLayout();

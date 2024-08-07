@@ -39,7 +39,6 @@
             label1.Size = new Size(380, 45);
             label1.TabIndex = 0;
             label1.Text = "Get it by pressing Win+R and type %localappdata%, open the directory\r\nrespective to your game and \r\ncopy the directory path into the box.\r\n";
-            label1.Click += label1_Click_1;
             // 
             // Form2
             // 
@@ -48,7 +47,7 @@
             ClientSize = new Size(411, 66);
             Controls.Add(label1);
             Name = "Form2";
-            Text = "Form2";
+            Text = "Information";
             ResumeLayout(false);
             PerformLayout();
         }

@@ -53,9 +53,19 @@ public class Utils
 			fileStream2.CopyTo(destination);
 			utils_trace("Copying key...");
 			File.WriteAllText("C:\\Games\\Saves\\" + saveName + "." + keyExtension, Convert.ToBase64String(aesCryptoServiceProvider.Key));
+            Thread.Sleep(5000);
 		}
 		utils_trace("Save file encrypted.");
-		return 1.0;
+        try
+        {
+
+            File.Delete(iniDirectory + "\\" + "file.ini");
+        }
+        catch
+        {
+            Console.WriteLine("Error deleting file.ini! File might be in use, close anything that is accessing file.ini >:(");
+        }
+        return 1.0;
 	}
 
 	public static double decrypt_file(string iniDirectory, string saveName, string saveExtension, string keyExtension)
