@@ -2,7 +2,8 @@ using System.Diagnostics.Eventing.Reader;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.IO;
-
+using System.Drawing.Text;
+using static System.Windows.Forms.Timer;
 namespace CTACheat
 {
     public partial class Form1 : Form
@@ -13,6 +14,15 @@ namespace CTACheat
         public Form1()
         {
             InitializeComponent();
+            this.Shown += new System.EventHandler(Form1_Shown);
+        }
+        private async void Form1_Shown(object sender, EventArgs e)
+        {
+            while(true)
+            {
+                await Task.Delay(TimeSpan.FromSeconds(5));
+                ChangeTitle();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -57,18 +67,11 @@ namespace CTACheat
             Console.WriteLine("WARNING: Be careful while editing the decrypted file.ini, improper changes can result in your savegame being unusable!");
 
         }
-
-        private void label2_Click(object sender, EventArgs e)
+        string[] titleNames = ["No more anti-cheat, checkmate", "Can't get past the pre-chase sequence, LOL!", "noodles are tasty", "LINUX SUPREMACY", "testing testing ABCDEFGHIJKLMNOPQRSTUVWYZ 1234567890", ""];
+        private void ChangeTitle()
         {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-            RandomNumberGenerator.GetInt32(1);
-            object titleNames = new object[6];
-            //Form1.Text = ""
+            int randomtitle = RandomNumberGenerator.GetInt32(titleNames.Length);
+            button1.FindForm().Text = "CTACheat -- " + titleNames[randomtitle] + " -- v2.0.1";
         }
     }
 }

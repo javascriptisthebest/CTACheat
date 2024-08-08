@@ -36,8 +36,7 @@
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
-            pictureBox1 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            button5 = new Button();
             SuspendLayout();
             // 
             // textBox1
@@ -65,7 +64,6 @@
             label2.Size = new Size(321, 15);
             label2.TabIndex = 3;
             label2.Text = "Save name (follow the below instructions to get save name)";
-            label2.Click += label2_Click;
             // 
             // label4
             // 
@@ -114,20 +112,21 @@
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
-            // pictureBox1
+            // button5
             // 
-            pictureBox1.Location = new Point(546, 166);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(158, 35);
-            pictureBox1.TabIndex = 13;
-            pictureBox1.TabStop = false;
+            button5.Location = new Point(636, 14);
+            button5.Name = "button5";
+            button5.Size = new Size(152, 59);
+            button5.TabIndex = 14;
+            button5.Text = "Settings";
+            button5.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(pictureBox1);
+            Controls.Add(button5);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
@@ -137,9 +136,7 @@
             Controls.Add(button1);
             Controls.Add(textBox1);
             Name = "Form1";
-            Text = "CTACheat -- PLACEHOLDER v2.0.0";
-            Load += Form1_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            Text = "CTACheat -- Created by javascript1 -- v2.0.1";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -149,15 +146,11 @@
         private TextBox textBox1;
         private Button button1;
         private Label label2;
-        private Label label3;
         private Label label4;
-        private Label label5;
-        private TextBox textBox2;
         private TextBox textBox3;
-        private TextBox textBox4;
         private Button button2;
         private Button button3;
         private Button button4;
-        private PictureBox pictureBox1;
+        private Button button5;
     }
 }
