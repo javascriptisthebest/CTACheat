@@ -37,6 +37,7 @@
             button3 = new Button();
             button4 = new Button();
             button5 = new Button();
+            button6 = new Button();
             SuspendLayout();
             // 
             // textBox1
@@ -121,11 +122,24 @@
             button5.Text = "Settings";
             button5.UseVisualStyleBackColor = true;
             // 
+            // button6
+            // 
+            button6.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
+            button6.Location = new Point(609, 80);
+            button6.Name = "button6";
+            button6.RightToLeft = RightToLeft.No;
+            button6.Size = new Size(179, 97);
+            button6.TabIndex = 15;
+            button6.Text = "**NEW** EZ Mode";
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button6);
             Controls.Add(button5);
             Controls.Add(button4);
             Controls.Add(button3);
@@ -136,7 +150,7 @@
             Controls.Add(button1);
             Controls.Add(textBox1);
             Name = "Form1";
-            Text = "CTACheat -- Created by javascript1 -- v2.0.1";
+            Text = "CTACheat -- Created by javascript1 -- v3.0.0";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -152,5 +166,6 @@
         private Button button3;
         private Button button4;
         private Button button5;
+        private Button button6;
     }
 }

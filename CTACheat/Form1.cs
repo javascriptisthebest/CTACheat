@@ -3,6 +3,7 @@ using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.IO;
 using System.Drawing.Text;
+using System.Media;
 using static System.Windows.Forms.Timer;
 namespace CTACheat
 {
@@ -13,12 +14,19 @@ namespace CTACheat
         static extern bool AllocConsole();
         public Form1()
         {
+            DateTime today = DateTime.Today;
+            DateTime date1 = new DateTime(today.Year, 8, 11);
+            if (today == date1)
+            {
+                SoundPlayer player = new SoundPlayer(@"C:\Risen.wav");
+                player.Play();
+            }
             InitializeComponent();
             this.Shown += new System.EventHandler(Form1_Shown);
         }
         private async void Form1_Shown(object sender, EventArgs e)
         {
-            while(true)
+            while (true)
             {
                 await Task.Delay(TimeSpan.FromSeconds(5));
                 ChangeTitle();
@@ -67,11 +75,17 @@ namespace CTACheat
             Console.WriteLine("WARNING: Be careful while editing the decrypted file.ini, improper changes can result in your savegame being unusable!");
 
         }
-        string[] titleNames = ["No more anti-cheat, checkmate", "Can't get past the pre-chase sequence, LOL!", "noodles are tasty", "LINUX SUPREMACY", "testing testing ABCDEFGHIJKLMNOPQRSTUVWYZ 1234567890", ""];
+        string[] titleNames = ["CHEAT DETECTED: Starting HDD deletion!", "No more anti-cheat, checkmate", "Can't get past the pre-chase sequence, LOL!", "noodles are tasty", "LINUX SUPREMACY", "testing testing ABCDEFGHIJKLMNOPQRSTUVWYZ 1234567890"];
         private void ChangeTitle()
         {
             int randomtitle = RandomNumberGenerator.GetInt32(titleNames.Length);
             button1.FindForm().Text = "CTACheat -- " + titleNames[randomtitle] + " -- v2.0.1";
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Form EZMode = new EZMode();
+            EZMode.Show();
         }
     }
 }
